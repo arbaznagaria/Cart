@@ -3,7 +3,7 @@ module.exports = {
     entry: './ts/main.ts',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, './gen')
+        path: path.resolve(__dirname, 'gen')
     },
     mode: "development",
     module: {
@@ -25,6 +25,6 @@ module.exports = {
             directory: path.join(__dirname, 'gen'),
         },
         compress: true,
-        port: 9000,
+        port: 8000,
     },
 };
