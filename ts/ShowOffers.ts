@@ -1,11 +1,16 @@
-export class ShowOffers{
-    showoffers():void{
-        var data:any = localStorage.getItem('cartdata');
+import { clickfcn } from "./clickfcn";
+
+export class ShowOffers extends clickfcn{
+
+    
+    showoffers(data:any):void{
+        // var data:any = localStorage.getItem('cart')
+        console.log(data)
         var cart = document.querySelector('.cart');
         // console.log(cart)
         
         // document.getElementsByClassName("cart").innerHTML = "Arbaz";
-        data = JSON.parse(data);
+        // data = JSON.parse(data);
         // console.log(data)
         var str:string = '';
         str += '<div class="row mt-5">'
@@ -18,11 +23,12 @@ export class ShowOffers{
             str += '<del><p class="card-text">Price : '+data[i].orig_price+'</p></del>'
             str += '<p class="card-text" style="color:red;">Offer Price : '+data[i].disc_price+'</p>'
             str += '<p class="card-text"">Description : '+data[i].desc+'</p>'
-            str += '<a href="#'+data[i].id+'" class="btn btn-primary">Add to Cart</a>'
+            str += '<form class="formcontrol"><button type="submit" class="btn btn-primary" id="btn">Add to Cart</button></form>'
             str += '</div></div></div>'
         }
         str += "</div>"
         cart.innerHTML=str;
         // console.log("str")
+        this.click()
     }
 }
