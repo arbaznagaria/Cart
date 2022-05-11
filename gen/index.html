@@ -17,7 +17,26 @@
                     <h6>Mama's Cart</h6>
                 </div>
                 <div class="col-6">
-                    <i class="fa fa-shopping-cart"><span class="badge bg-primary"></span></i>
+                    <a href="javascript:void(0)" id="cartbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-cart"><span class="badge bg-primary"></span></i></a>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="staticBackdropLabel">Mama's Cart</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div id="cartshow">
+
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Buy</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </nav>
